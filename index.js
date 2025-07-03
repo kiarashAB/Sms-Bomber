@@ -2,26 +2,26 @@ const btn_send = document.getElementById("btn_send");
 const number = document.getElementById("number").value;
 
 
-// btn_send.addEventListener("click", () => {
-//     const numberInput = document.getElementById("number").value;
+btn_send.addEventListener("click", () => {
+    const numberInput = document.getElementById("number").value;
 
-//     const xhr = new XMLHttpRequest();
-//     const data = `mobile=${encodeURIComponent(numberInput)}`;
+    const xhr = new XMLHttpRequest();
+    const data = `mobile=${encodeURIComponent(numberInput)}`;
 
-//     xhr.open("POST", "https://auth.basalam.com/otp-request", true);
-//     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.open("POST", "https://auth.basalam.com/otp-request", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-//     xhr.onload = () => {
-//         alert("کد وضعیت:", xhr.status);
-//         alert("پاسخ سرور:", xhr.responseText);
-//     };
+    xhr.onload = () => {
+        alert("کد وضعیت:", xhr.status);
+        alert("پاسخ سرور:", xhr.responseText);
+    };
 
-//     xhr.onerror = () => {
-//         document.getElementById("status_server").innerText = "ارسال شد";     
-//     };
+    xhr.onerror = () => {
+        document.getElementById("status_server").innerText = "ارسال شد";     
+    };
 
-//     xhr.send(data);
-// });
+    xhr.send(data);
+});
 
 // btn_send.addEventListener("click", () => { 
 //     const numberInput = document.getElementById("number").value;
@@ -44,25 +44,25 @@ const number = document.getElementById("number").value;
 //     xhr1.send(data1);
 // });
 
-function bomb(){
-    const numberInput = document.getElementById("number").value;
+// function bomb(){
+//     const numberInput = document.getElementById("number").value;
 
 
-    fetch("https://bimebazar.com/accounts/api/login_sec/",{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/x-www-form-urlencoded",            
-          },
-          body: new URLSearchParams({ username: numberInput })
-    })
-    .then(res => {
-      console.log("status:", res.status);
-      return res.text()
-    })
-    .then(data => {
-      console.log("پاسخ سرور:", data);
-    })
+//     fetch("https://bimebazar.com/accounts/api/login_sec/",{
+//         method:"POST",
+//         headers:{
+//             "Content-Type":"application/x-www-form-urlencoded",            
+//           },
+//           body: new URLSearchParams({ username: numberInput })
+//     })
+//     .then(res => {
+//       console.log("status:", res.status);
+//       return res.text()
+//     })
+//     .then(data => {
+//       console.log("پاسخ سرور:", data);
+//     })
 
-}
+// }
 
-btn_send.addEventListener("click",bomb);
+// btn_send.addEventListener("click",bomb);
