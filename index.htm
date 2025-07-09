@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bomb mesige</title>
+    <link rel="stylesheet" href="css/idex.css">
+    <link rel="stylesheet" href="font/font.css">
 </head>
 <body>
-    
+    <div class="Bomb">
+        <div class="Boxtitel">
+            <h1>پنل  SMS BOMBER</h1>
+        </div>
+        <div class="BoxBomb">
+            <div class="Box1">
+                <p>SMS ارسال</p>
+                <label>شماره موبایل</label>
+                <input type="number" id="number" placeholder="0912*******" dir="ltr">
+                <button class="btn" id="btn">حمله</button>
+            </div>
+            <div class="Box" id="box">
+                <p>نتایج تست</p>
+                <div class="box_ok">
+                    <p class="p1">پیام با موفقیت ارسال شد</p>
+                </div>
+                <div class="box_error" id="box_error">
+                    <p class="p1">پیام ارسال نشد</p>
+                </div>
+                <div class="boxResults">
+                    <div class="box">
+                        <p>1</p>
+                        <p>نتایج</p>
+                    </div>
+                    <div class="box">
+                        <p>1</p>
+                        <p>خطا</p>
+                    </div>
+                    <div class="box">
+                        <p>1</p>
+                        <p>کل</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
 </body>
 </html>
